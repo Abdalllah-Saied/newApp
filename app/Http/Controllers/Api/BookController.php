@@ -12,6 +12,7 @@ class BookController extends Controller
 {
     public function index()
     {
+        //dsfadsfasdf
         $book = Book::get();
         return $book;
     }
