@@ -34,4 +34,12 @@ class BookController extends Controller
         ]);
 
     }
+    public function delete($bookId)
+    {
+        $book = Book::find($bookId);
+        $book->delete();
+        return response()->json([
+            'message' => 'Book deleted Successfully',
+        ]);
+    }
 }
