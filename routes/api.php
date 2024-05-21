@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\BookController;
+use App\Http\Controllers\genresController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Borrower;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\BookController;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,5 +25,6 @@ Route::post('/test',function (Request $request){
 Route::get('/books',[BookController::class,'index']);
 Route::post('/store-book',[BookController::class,'store']);
 Route::delete('/book/delete/{bookId}',[BookController::class, 'delete']);
+Route :: post("/books/genres",[genresController::class,"index"]);
 Route::get('/borrowers',[Borrower::class, 'index']);
 
