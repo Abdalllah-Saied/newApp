@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\BookController;
+use App\Http\Controllers\genresController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,5 @@ Route::post('/test',function (Request $request){
 Route::get('/books',[BookController::class,'index']);
 Route::post('/store-book',[BookController::class,'store']);
 Route::delete('/book/delete/{bookId}',[BookController::class, 'delete']);
+Route :: post("/books/genres",[genresController::class,"index"]);
 
