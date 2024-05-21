@@ -23,4 +23,5 @@ Route::post('/test',function (Request $request){
 });
 Route::get('/books',[BookController::class,'index']);
 Route::post('/store-book',[BookController::class,'store']);
+Route::delete('/book/delete/{bookId}',[BookController::class, 'delete']);
 
