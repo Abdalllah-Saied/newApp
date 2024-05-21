@@ -10,7 +10,7 @@ class Borrower extends Controller
   public function index(){
 
     $borrowers=borrowers::get();
-    return $borrowers;
+    return response()->json(["status"=>"done","data"=>$borrowers]);
  
 
   }
